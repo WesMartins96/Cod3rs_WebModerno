@@ -1,3 +1,5 @@
 {
-    "code-runner.clearPreviousOutput": true
+    "code-runner.clearPreviousOutput": true,
+    "editor.fontFamily": "Inconsolata Medium",
+    "editor.fontSize": 16
 }
