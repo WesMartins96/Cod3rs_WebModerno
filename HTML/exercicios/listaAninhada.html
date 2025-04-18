@@ -1,0 +1,58 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+        backend
+        <ul>
+            <li>
+                app
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                config
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        frontend
+        <ul>
+            <li>
+                public
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('.tree li').forEach(li => {
+        const sublist = li.querySelector('ul');
+        if (sublist) {
+            li.style.cursor = 'pointer';
+
+            li.addEventListener('click', function (e) {
+                e.stopPropagation(); // impede propagação para o pai
+
+                // alterna entre mostrar e esconder
+                if (sublist.style.display === 'none') {
+                    sublist.style.display = 'block';
+                } else {
+                    sublist.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
