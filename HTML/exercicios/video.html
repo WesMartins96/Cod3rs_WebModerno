@@ -1,0 +1,39 @@
+<iframe id="meuVideo" width="800" height="500" src="https://www.youtube.com/embed/4dZU25NJYkM?si=Ztf5L7E8EkK8_xYP"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+
+<div>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+
+
+<style>
+    iframe {
+        border-radius: 20px;
+    }
+
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso>div {
+        background-color: #5cdd;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 20%;
+    }
+</style>

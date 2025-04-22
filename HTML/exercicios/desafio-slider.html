@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider de Imagens</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider {
+            width: 513px;
+            height: 342px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+        }
+
+        .slides {
+            display: flex;
+            width: calc(513px * 3);
+            height: 342px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 513px;
+            height: 342px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <div class="slides" id="slideContainer">
+            <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="muro da cidade" title="muro da cidade">
+            <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro cod3r">
+            <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="rj">
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slideContainer');
+        const totalSlides = 3;
+        let index = 0;
+
+        function moveSlide() {
+            index = (index + 1) % totalSlides;
+            slides.style.transform = `translateX(-${index * 513}px)`;
+        }
+
+        setInterval(moveSlide, 2000);
+    </script>
+
+</body>
+
+</html>
